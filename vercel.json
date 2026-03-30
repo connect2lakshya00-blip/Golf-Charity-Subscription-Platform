@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd golf-charity-platform/frontend && npm install && npm run build",
+  "outputDirectory": "golf-charity-platform/frontend/.next",
+  "installCommand": "cd golf-charity-platform/frontend && npm install",
+  "framework": "nextjs"
+}
