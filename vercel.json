@@ -1,6 +1,9 @@
 {
-  "buildCommand": "cd golf-charity-platform/frontend && npm install && npm run build",
-  "outputDirectory": "golf-charity-platform/frontend/.next",
-  "installCommand": "cd golf-charity-platform/frontend && npm install",
-  "framework": "nextjs"
+  "version": 2,
+  "builds": [
+    {
+      "src": "golf-charity-platform/frontend/package.json",
+      "use": "@vercel/next"
+    }
+  ]
 }
