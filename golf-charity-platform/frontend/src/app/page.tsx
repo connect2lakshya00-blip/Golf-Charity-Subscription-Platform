@@ -88,10 +88,10 @@ export default function HomePage() {
   const [featuredCharity, setFeaturedCharity] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/health')
+    fetch('/api/health')
       .then(r => r.ok ? setApiStatus('ok') : setApiStatus('error'))
       .catch(() => setApiStatus('error'));
-    fetch('http://localhost:5000/api/charities')
+    fetch('/api/charities')
       .then(r => r.json())
       .then(data => data.length > 0 && setFeaturedCharity(data[0]))
       .catch(() => {});

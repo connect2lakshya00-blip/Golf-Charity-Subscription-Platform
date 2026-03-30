@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+// In production (Vercel), API routes are on the same domain /api
+// In development, use the Express backend on port 5000
+const baseURL = process.env.NEXT_PUBLIC_API_URL || '/api';
+
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api',
+  baseURL,
   headers: { 'Content-Type': 'application/json' },
 });
 
@@ -14,7 +18,7 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// Handle 401 globally — redirect to login
+// Handle 401 globally
 api.interceptors.response.use(
   (res) => res,
   (err) => {
