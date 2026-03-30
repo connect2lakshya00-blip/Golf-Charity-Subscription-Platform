@@ -117,6 +117,7 @@ export default function HomePage() {
           </div>
           <div className="hidden md:flex items-center gap-6">
             <Link href="/charities" className="nav-link">Charities</Link>
+            <Link href="/leaderboard" className="nav-link">Leaderboard</Link>
             <Link href="/pricing" className="nav-link">Pricing</Link>
           </div>
           <div className="flex gap-3">

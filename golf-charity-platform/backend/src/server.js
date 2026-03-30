@@ -11,6 +11,7 @@ const charityRoutes = require('./routes/charities');
 const drawRoutes = require('./routes/draws');
 const adminRoutes = require('./routes/admin');
 const webhookRoutes = require('./routes/webhooks');
+const leaderboardRoutes = require('./routes/leaderboard');
 
 const app = express();
 
@@ -50,6 +51,7 @@ app.use('/api/scores', scoreRoutes);
 app.use('/api/charities', charityRoutes);
 app.use('/api/draws', drawRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/leaderboard', leaderboardRoutes);
 
 // Health check
 app.get('/health', (req, res) => res.json({ status: 'ok', timestamp: new Date().toISOString() }));

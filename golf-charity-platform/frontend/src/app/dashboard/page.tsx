@@ -146,6 +146,9 @@ export default function DashboardPage() {
             <Link href="/charities" className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-gray-400 hover:text-white hover:bg-gray-800/60 transition-all">
               <span>❤️</span>Charities
             </Link>
+            <Link href="/leaderboard" className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-gray-400 hover:text-white hover:bg-gray-800/60 transition-all">
+              <span>🏆</span>Leaderboard
+            </Link>
             {user?.role === 'admin' && (
               <Link href="/admin" className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-yellow-400 hover:bg-yellow-500/10 transition-all">
                 <span>⚙️</span>Admin Panel
