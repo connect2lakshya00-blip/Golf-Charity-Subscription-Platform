@@ -7,6 +7,12 @@ import toast from 'react-hot-toast';
 import api from '@/lib/api';
 import { useAuthStore } from '@/store/authStore';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type RazorpayInstance = any;
+declare global {
+  interface Window { Razorpay: new (options: RazorpayInstance) => RazorpayInstance; }
+}
+
 const features = [
   'Monthly draw entry',
   'Stableford score tracking (5 scores)',
