@@ -28,7 +28,7 @@ function CountdownTimer() {
     };
     const tick = () => {
       const now = new Date();
-      const diff = getNextDraw() - now;
+      const diff = getNextDraw().getTime() - now.getTime();
       setTime({
         days: Math.floor(diff / 86400000),
         hours: Math.floor((diff % 86400000) / 3600000),
